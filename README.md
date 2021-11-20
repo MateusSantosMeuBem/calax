@@ -1,4 +1,4 @@
-# PT-BR 
+* # PT-BR 
 
 Calax é um bot de diversão craiado na [comunidade Ballerini](https://discord.gg/wagxzStdcR) inspirado na famosa brincadeira de verdade ou desafio. Seu nome é baseado no personagem demoníaco do filme [Truth or Dare](https://pt.wikipedia.org/wiki/Truth_or_Dare_(2018)). 
 
@@ -139,6 +139,10 @@ channels_ids = {
 ```
 Caso precise criar mais salar, basta duplicar o dicionário dentro de `channels_ids` e informar os IDs necessários.
 
+### CONFIGURAÇÃO DO BANCO DE DADOS DE PERGUNTAS E DESAFIOS
+
+Para que qualquer pessoa possa adicionar ou excluir perguntas e desafios sem um conhecimento prévio de banco de dados, utilizuou-se uma tabela Excel, onde a primeira coluna corresponde às perguntas e a segunda aos desafios.
+
 &nbsp;
 ## COMANDOS
 
@@ -180,7 +184,7 @@ Na primeira vez que o bot é iniciado, você deve chamar o comando `??add_messag
 
 
 &nbsp;
-# ENGLISH 
+* # EN-US 
 
 Calax is a fun bot made in [Ballerini](https://discord.gg/wagxzStdcR) inspired by the famous game called truth or dare. Its name is from the demonic character in [Truth or Dare](https://pt.wikipedia.org/wiki/Truth_or_Dare_(2018)). 
 
@@ -322,40 +326,45 @@ channels_ids = {
 ```
 If you need to create more channels, just duplicate the dictionary inside `channels_ids` and inform the IDs necessary.
 
+### QUESTIONS AND ANSWERS DATABASE CONFIGURATION
+
+To any person be able to add or delete questions and challenges without a previous knowledge about database, we used an Excel table, where the first column corresponds to the questions and the second to the challenges.
+
 &nbsp;
 ## COMMAND LIST
 
 To call any command, just type `??` before the command. For example, to call the command `iniciar`, just type `??iniciar`.
-* `Show_list` - Shows the players in the game in the master channel.
-* `iniciar` - Starts the game.\
-Similar: `inicia`, `começa`, `comeca`, `play`
-* `girar` - Determines who will answer the truth or consequence.\
-Similar: `gira`, `roda`, `rodar`, `spin`
+* `show_list` - Shows the players in the game in the master channel.
+* `play` - Starts the game.\
+Similar: `iniciar`, `inicia`, `começa`, `comeca`
+* `spin` - Determines who will answer the truth or consequence.\
+Similar: `gira`, `roda`, `rodar`, `girar`
 * `op` + `<opção>` - Determines which option the player chose, `v` if it's the truth or `c` if it's the consequence. For example, `??op v` or `??op c`.\
 Similar: `opção`, `opcao`, `option`
-* `ajuda` - Choose a question or a random challenge.
-Similar: `ajd`, `help`
-* `feito` - Command used when the victim responds. After it starts the voting.\
-Similar: `done`
-* `reload` - Reinicia a rodada.
-* `proximo` - Passa a vez para o próximo jogador.\
-Semelhantes: `next`
-* `info` - Mostra no terminal informações sobre o jogo em todas as salas.
-* `exitPlayer` + `<id_jogador>` + `<opção>` - Remove o jogador. Se `<opção>` for 1, remove da lista de jogagores que estão jogando, se for 2, remove da lista de voz, se for 3, remove de ambas. Por exemplo, `??exitPlayer 123456789123456 1` ou `??exitPlayer 123456789123456 2`.
+* `help` - Choose a question or a random challenge.
+Similar: `ajd`, `ajuda`
+* `done` - Command used when the victim responds. After it starts the voting.\
+Similar: `feito`
+* `reload` - Restarts the round.
+* `next` - Skip the current player.\
+Similar: `proximo`
+* `info` - Shows in terminal informations about the game in all channels.
+* `exitPlayer` + `<id_player>` + `<option>` - Removes the player. If `<option>` is 1, removes from the list of players playing, if it's 2, removes from the list of voice, if it's 3, removes from both. For example, `??exitPlayer 123456789123456 1` or `??exitPlayer 123456789123456 2`.
 * `setBotMaster` + `<id_canal_de_voz>` + `<id_novo_bot_master>` - Define o novo bot master. Por exemplo, `??setBotMaster 123456789123456 123456789123456`.
-* `regras` - Mostra as regras do jogo.
-Semelhantes: `regra`, `rules`, `rule`
-* `add_message` - Adciona a mensagem de autenticação.
+* `setBotMaster` + `<id_voice_channel>` + `<id_new_bot_master>` - Defines the new bot master. For example, `??setBotMaster 123456789123456 123456789123456`.
+* `rules` - Shows the rules of the game.\
+Similar: `regra`, `regras`, `rule`
+* `add_message` - Adds the authentication message.
 
-Na primeira vez que o bot é iniciado, você deve chamar o comando `??add_message` no canal de autenticação, adicionar o id da mensagem ao código e reiniciar o bot.
+First time you start the bot, you must call the command `??add_message` in the authentication channel, add the id of the message to the code and restart the bot.
 
 &nbsp;
-## REGRAS DO JOGO
+## GAME RULES
 
-1. Para participar do jogo, o jogador precisa se autenticar no canal de autenticação reagindo com o emoji de autenticação.
-2. Para se autenticar, o jogador deve estar em um canal de voz da brincadeira.
-3. Na sala de texto, o bot master deve digitar `??iniciar` para iniciar o jogo e o bot irá escolher alguém para girar.
-4. Após girar, o bot irá escolher um jogador para responder e essa pessoa precisa escolher entre verdade ou consequência.
-5. Após responder, essa pessoa deve digitar `??feito` para iniciar a votação.
-6. Após a votação, o bot irá indicar a próxima pessoa a girar. A ordem é definida pela ordem de autenticação.
-7. Quando a última pessoa da sala girar, o bot recomeça do início.
+1. To play, the player must authenticate in the authentication channel reacting with the authentication emoji.
+2. To authenticate, the player must be in a voice channel of the game.
+3. In the text channel, the bot master must type `??play` to start the game and the bot will choose someone to spin.
+4. After spinning, the bot will choose a player to answer and this person must choose between truth or consequence.
+5. After answering, this person must type `??done` to start the voting.
+6. After the voting, the bot will indicate the next person to spin. The order is defined by the order of authentication.
+7. When the last person spin, the bot restarts from the beginning.
