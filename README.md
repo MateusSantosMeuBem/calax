@@ -97,7 +97,7 @@ Canais de voz:
 
 Para que o código funcione corretamente, é necessário que você tenha instalado as bibliotecas [Discord.py](https://pypi.org/project/discord.py/),  [Pandas](https://pypi.org/project/pandas/) e [openpyxl](https://pypi.org/project/openpyxl/).
 
-No arquivo de [credenciais](modules\credentials\__init__.py) você deve informar o token do bot, o ID da sala de autenticação, o ID da sala de texto e o ID da sala e ID do mestre do bot para cada sala de voz como dado inteiro. Por exemplo:
+No arquivo de [credenciais](https://github.com/MateusSantosMeuBem/calax_v_python/blob/main/modules/credentials/__init__.py) você deve informar o token do bot, o ID da sala de autenticação, o ID da sala de texto e o ID da sala e ID do mestre do bot para cada sala de voz como dado inteiro. Por exemplo:
 
 ```python
 bot_token = 'Okklvnkjgnjkgkjeg.bkhb1d5f6sd6'
@@ -284,7 +284,7 @@ Voice channels:
 
 For code to work correctly, you need to install [Discord.py](https://pypi.org/project/discord.py/) and [Pandas](https://pypi.org/project/pandas/) and [Openpyxl](https://pypi.org/project/openpyxl/).
 
-In file [credenciais](modules\credentials\__init__.py) you should set bot token, authentication channel ID, text channel ID and bot master ID for each voice channel as integer. For example:
+In file [credenciais](https://github.com/MateusSantosMeuBem/calax_v_python/blob/main/modules/credentials/__init__.py) you should set bot token, authentication channel ID, text channel ID and bot master ID for each voice channel as integer. For example:
 
 ```python
 bot_token = 'Okklvnkjgnjkgkjeg.bkhb1d5f6sd6'
